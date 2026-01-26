@@ -9,7 +9,7 @@ const config = {
   password: `${process.env.DB_PASSWORD || 'test'}`,
   database: `${process.env.DB_DATABASE || 'bucketlist'}`,
   entities: ['dist/**/**/*.entity{.ts,.js}'],
-  migrations: ['dist/migrations/*{.ts,.js}'],
+  migrations: [__dirname + '/../migrations/*.ts'],
   autoLoadEntities: true,
   synchronize: false,
 };

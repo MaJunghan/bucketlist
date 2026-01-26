@@ -3,6 +3,10 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
+import { UsersModule } from './users/users.module';
+import { DestinationsModule } from './destinations/destinations.module';
+import { BucketListsModule } from './bucket-lists/bucket-lists.module';
+import { BucketListItemsModule } from './bucket-list-items/bucket-list-items.module';
 import typeorm from './config/typeorm';
 
 @Module({
@@ -22,6 +26,10 @@ import typeorm from './config/typeorm';
         return options;
       },
     }),
+    UsersModule,
+    DestinationsModule,
+    BucketListsModule,
+    BucketListItemsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
