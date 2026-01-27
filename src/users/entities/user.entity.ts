@@ -10,14 +10,22 @@ export class User {
     type: 'varchar',
     length: 255,
     nullable: false,
-    unique: true
+    default: '',
+  })
+  name: string;
+
+  @Column({
+    type: 'varchar',
+    length: 255,
+    nullable: false,
+    unique: true,
   })
   username: string;
 
   @Column({
     type: 'varchar',
     length: 255,
-    nullable: false
+    nullable: false,
   })
   password: string;
 
@@ -25,7 +33,7 @@ export class User {
     name: 'refresh_token',
     type: 'varchar',
     length: 255,
-    nullable: true
+    nullable: true,
   })
   refreshToken?: string;
 
