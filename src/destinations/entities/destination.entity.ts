@@ -10,6 +10,7 @@ export class Destination {
     type: 'varchar',
     length: 255,
     nullable: false,
+    unique: true,
   })
   name: string;
 
